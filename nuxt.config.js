@@ -1,4 +1,21 @@
 const pkg = require('./package')
+const resolve = require('path').resolve
+
+const isVueRule = (rule) => {
+  return rule.test.toString() === '/\\.vue$/'
+}
+const isSASSRule = (rule) => {
+  return ['/\\.sass$/', '/\\.scss$/'].indexOf(rule.test.toString()) !== -1
+}
+const sassResourcesLoader = {
+  loader: 'sass-resources-loader',
+  options: {
+    resources: [
+      resolve(__dirname, 'sass/_variables.scss'),
+      resolve(__dirname, 'sass/_mixins.scss')
+    ]
+  }
+}
 
 module.exports = {
   mode: 'universal',
@@ -27,6 +44,7 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    '~/sass/main.scss'
   ],
 
   /*
@@ -44,20 +62,38 @@ module.exports = {
   /*
   ** Build configuration
   */
-  build: {
-    /*
-    ** You can extend webpack config here
-    */
-    extend(config, ctx) {
-      // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
+ build: {
+  /*
+  ** You can extend webpack config here
+  */
+  extend(config, ctx) {
+    // Run ESLint on save
+    if (ctx.isDev && ctx.isClient) {
+      config.module.rules.push({
+        enforce: 'pre',
+        test: /\.(js|vue)$/,
+        loader: 'eslint-loader',
+        exclude: /(node_modules)/
+      })
     }
+    config.module.rules.forEach((rule) => {
+      if (isVueRule(rule)) {
+        rule.options.loaders.sass.push(sassResourcesLoader)
+        rule.options.loaders.scss.push(sassResourcesLoader)
+      }
+      if (isSASSRule(rule)) {
+        rule.use.push(sassResourcesLoader)
+      }
+    })
+
+    const urlLoader = config.module.rules.find((rule) => rule.loader === 'url-loader')
+    urlLoader.test = /\.(png|jpe?g|gif)$/
+
+    config.module.rules.push({
+      test: /\.svg$/,
+      loader: 'vue-svg-loader',
+      exclude: /node_modules/
+    })
   }
+}
 }
