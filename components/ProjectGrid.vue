@@ -1,5 +1,5 @@
 <template>
-  <div class="project-grid container">
+  <div class="project-grid">
     <nuxt-link to="project">
       <img class="project project--1" src="~/assets/images/pinclone.jpg" alt="">
     </nuxt-link>
