@@ -1,6 +1,8 @@
 <template>
   <div class="project-grid container">
-    <img class="project project--1" src="~/assets/images/pinclone.jpg" alt="">
+    <nuxt-link to="project">
+      <img class="project project--1" src="~/assets/images/pinclone.jpg" alt="">
+    </nuxt-link>
     <img class="project project--2" src="~/assets/images/books.jpg" alt="">
     <img class="project project--3" src="~/assets/images/voting.jpg" alt="">
     <img class="project project--4" src="~/assets/images/pomodoro.jpg" alt="">

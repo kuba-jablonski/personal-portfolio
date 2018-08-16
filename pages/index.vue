@@ -1,5 +1,13 @@
 <template>
 <div>
+  <nav class="nav container">
+    <div class="brand">Hello</div>
+    <div class="nav-items">
+      <div>Home</div>
+      <div>Projects</div>
+      <div>Contact</div>
+    </div>
+  </nav>
   <the-header/>
   <project-grid/>
 </div>
@@ -16,3 +24,15 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.nav {
+  padding-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-items {
+  display: flex;
+}
+</style>
