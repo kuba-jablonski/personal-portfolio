@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav container">
+  <nav class="nav">
     <MailIcon class="nav__icon"/>
     <div class="nav__items">
       <div class="nav__item">Home</div>
@@ -21,6 +21,10 @@ export default {
 
 <style lang="scss" scoped>
 .nav {
+  max-width: 114rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10rem;
   padding-top: 5rem;
   display: flex;
   justify-content: space-between;

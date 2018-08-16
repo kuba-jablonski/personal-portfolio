@@ -1,13 +1,21 @@
 <template>
   <div class="project-grid">
-    <nuxt-link to="projects/project">
-      <img class="project project--1" src="~/assets/images/pinclone.jpg" alt="">
-    </nuxt-link>
-    <img class="project project--2" src="~/assets/images/books.jpg" alt="">
-    <img class="project project--3" src="~/assets/images/voting.jpg" alt="">
-    <img class="project project--4" src="~/assets/images/pomodoro.jpg" alt="">
+    <nuxt-link v-for="project in projects" :key="project.id" :to="`projects/${project.id}`">
+      <img class="project" :src="project.images.thumbnail" alt="">
+    </nuxt-link>    
   </div>
 </template>
+
+<script>
+export default {
+  computed: {
+    projects() {
+      return this.$store.state.projects
+    }
+  }
+}
+</script>
+
 
 <style lang="scss" scoped>
 .project-grid {
