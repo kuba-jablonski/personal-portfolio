@@ -9,7 +9,7 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .projects {
   display: grid;
   grid-template-columns: 1fr 1fr;

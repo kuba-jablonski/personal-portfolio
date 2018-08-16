@@ -1,6 +1,6 @@
 <template>
   <div class="project-grid">
-    <nuxt-link to="project">
+    <nuxt-link to="projects/project">
       <img class="project project--1" src="~/assets/images/pinclone.jpg" alt="">
     </nuxt-link>
     <img class="project project--2" src="~/assets/images/books.jpg" alt="">
@@ -20,21 +20,10 @@
   padding: 4rem;
   width: 100%;
   transition: all .3s;
+  background-color: $color-grey-light-2;
 
-  &--1 {
-    background-color: #ACE8DC;
-  }
-
-  &--2 {
-    background-color: #FBEBA5;
-  }
-
-  &--3 {
-    background-color: #DDC6E7;
-  }
-
-  &--4 {
-    background-color: #B5EFCE;
+  &:hover {
+    background-color: #B2EBF2;
   }
 }
 </style>

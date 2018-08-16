@@ -1,6 +1,5 @@
 <template>
 <div>
-  <the-nav/>
   <header class="header container">
     <text-box>
       <h1 class="h1" slot="heading">Jakub Jabłoński</h1>
@@ -14,13 +13,11 @@
 </template>
 
 <script>
-import TheNav from '@/components/TheNav'
 import ProjectGrid from '@/components/ProjectGrid'
 import TextBox from '@/components/TextBox'
 
 export default {
   components: {
-    TheNav,
     ProjectGrid,
     TextBox
   }
