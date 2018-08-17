@@ -5,6 +5,10 @@ import votingThumbnail from '~/assets/images/voting-thumbnail.png'
 import votingMain from '~/assets/images/voting-main.png'
 import booksThumbnail from '~/assets/images/books-thumbnail.png'
 import booksMain from '~/assets/images/books-main.png'
+import pomodoroThumbnail from '~/assets/images/pomodoro-thumbnail.png'
+import pomodoroMain from '~/assets/images/pomodoro-main.png'
+import quitsmokingThumbnail from '~/assets/images/quitsmoking-thumbnail.png'
+import quitsmokingMain from '~/assets/images/quitsmoking-main.png'
 
 
 const createStore = () => {
@@ -18,7 +22,7 @@ const createStore = () => {
             thumbnail: pincloneThumbnail,
             main: pincloneMain
           },
-          description: 'A Vue projects this is. Yes, it is. It is amazing and beautiful. This is placeholder text.'
+          description: 'A simple Pinterest-like app make with Vue and Firebase. My first attempt at creating a fully custom CSS solution without relying on any frameworks.'
         },
         {
           name: 'Voting App',
@@ -27,7 +31,7 @@ const createStore = () => {
             thumbnail: votingThumbnail,
             main: votingMain
           },
-          description: 'A Vue projects this is. Yes, it is. It is amazing and beautiful. This is placeholder text.'
+          description: 'My first Vue app AND my first Node/Mongo API. Huge milestone in my learning journey, but I do write much better code these days :)'
         },
         {
           name: 'Book Trading App',
@@ -36,14 +40,27 @@ const createStore = () => {
             thumbnail: booksThumbnail,
             main: booksMain
           },
-          description: 'A Vue projects this is. Yes, it is. It is amazing and beautiful. This is placeholder text.'
+          description: 'Vue SPA connected to a Node server. Data stored in MongoDB. Styled with the Vuetify framework.'
+        },
+        {
+          name: 'Pomodoro Timer',
+          id: 'pomodoro',
+          images: {
+            thumbnail: pomodoroThumbnail,
+            main: pomodoroMain
+          },
+          description: 'Offline first Vue.js Progressive Web App.'
+        },
+        {
+          name: 'Quit Smoking App',
+          id: 'qs',
+          images: {
+            thumbnail: quitsmokingThumbnail,
+            main: quitsmokingMain
+          },
+          description: 'A Vue project and a Node/Mongo APi. Offline capabilities with background sync.'
         }
       ]
-    },
-    mutations: {
-      increment (state) {
-        state.counter++
-      }
     },
     getters: {
       projectById: state => id => state.projects.find(project => project.id === id)
