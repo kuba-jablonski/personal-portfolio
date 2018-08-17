@@ -2,9 +2,9 @@
   <nav class="nav">
     <MailIcon class="nav__icon"/>
     <div class="nav__items">
-      <div class="nav__item">Home</div>
-      <div class="nav__item">Projects</div>
-      <div class="nav__item">Contact</div>
+      <nuxt-link to="/" exact class="nav__item">Home</nuxt-link>
+      <nuxt-link to="/projects" exact class="nav__item">Projects</nuxt-link>
+      <nuxt-link to="/contact" exact class="nav__item">Contact</nuxt-link>
     </div>
   </nav>
 </template>
@@ -48,5 +48,9 @@ export default {
       margin-right: 5rem;
     }
   }
+}
+
+.nuxt-link-active {
+  color: $color-grey-dark-1;
 }
 </style>
