@@ -4,7 +4,7 @@
       <h1 class="h1" slot="heading">{{ project.name }}</h1>
       <p>{{ project.description }}</p>      
     </text-box>
-    <img src="~/assets/images/pinclone2.png" alt="">
+    <img :src="project.images.main" alt="">
   </div>
 </template>
 

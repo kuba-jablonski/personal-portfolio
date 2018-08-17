@@ -1,17 +1,11 @@
 import Vuex from 'vuex'
-import pincloneThumbnail from '~/assets/images/pinclone.jpg'
-import pincloneMain from '~/assets/images/pinclone2.png'
-// import pincloneImgLg from '~/assets/images/pinclone-h.png'
-// import pomodoroImg from '~/assets/images/pomodoro.jpg'
-// import pomodoroImgLg from '~/assets/images/pomodoro-h.png'
-// import votingImg from '~/assets/images/voting.jpg'
-// import votingImgLg from '~/assets/images/voting-h.png'
-// import hanoiImg from '~/assets/images/hanoi.jpg'
-// import hanoiImgLg from '~/assets/images/hanoi-h.png'
-// import bookImg from '~/assets/images/books.jpg'
-// import bookImgLg from '~/assets/images/books-h.png'
-// import portfolioImg from '~/assets/images/portfolio.jpg'
-// import portfolioImgLg from '~/assets/images/portfolio-h.png'
+import pincloneThumbnail from '~/assets/images/pinclone-thumbnail.png'
+import pincloneMain from '~/assets/images/pinclone-main.png'
+import votingThumbnail from '~/assets/images/voting-thumbnail.png'
+import votingMain from '~/assets/images/voting-main.png'
+import booksThumbnail from '~/assets/images/books-thumbnail.png'
+import booksMain from '~/assets/images/books-main.png'
+
 
 const createStore = () => {
   return new Vuex.Store({
@@ -23,6 +17,24 @@ const createStore = () => {
           images: {
             thumbnail: pincloneThumbnail,
             main: pincloneMain
+          },
+          description: 'A Vue projects this is. Yes, it is. It is amazing and beautiful. This is placeholder text.'
+        },
+        {
+          name: 'Voting App',
+          id: 'voting',
+          images: {
+            thumbnail: votingThumbnail,
+            main: votingMain
+          },
+          description: 'A Vue projects this is. Yes, it is. It is amazing and beautiful. This is placeholder text.'
+        },
+        {
+          name: 'Book Trading App',
+          id: 'books',
+          images: {
+            thumbnail: booksThumbnail,
+            main: booksMain
           },
           description: 'A Vue projects this is. Yes, it is. It is amazing and beautiful. This is placeholder text.'
         }
