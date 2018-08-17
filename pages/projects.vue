@@ -1,12 +1,11 @@
 <template>
   <div>
     <!-- <div>Project List</div> -->
-    <nuxt-child />
+    <nuxt-child :key="$route.fullPath"/>
     <div class="container grid">
       <nuxt-link v-for="project in projects" :key="project.id" :to="`/projects/${project.id}`">
         <img  :src="project.images.thumbnail" alt="">
       </nuxt-link>
-      
     </div>
   </div>
 </template>

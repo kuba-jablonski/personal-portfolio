@@ -23,3 +23,17 @@ body {
   max-width: 112rem;
   padding: 0 3rem;
 }
+
+.page-enter-active, .page-leave-active {
+  transition: opacity .5s;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
+}
+
+.oko-enter-active, .oko-leave-active {
+  transition: opacity 5s;
+}
+.oko-enter, .oko-leave-to {
+  opacity: 0;
+}

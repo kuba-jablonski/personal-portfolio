@@ -12,6 +12,7 @@
 import TextBox from '@/components/TextBox'
 
 export default {
+  transition: 'oko',
   components: {
     TextBox
   },
