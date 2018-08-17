@@ -25,7 +25,7 @@ export default {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10rem;
-  padding-top: 5rem;
+  padding: 5rem 1rem 0 1rem;
   display: flex;
   justify-content: space-between;
 
