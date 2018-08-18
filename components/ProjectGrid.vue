@@ -23,7 +23,9 @@ export default {
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
 
-  @media screen and (max-width: 768px) {
+
+
+  @include respond(sm) {
     grid-template-columns: 1fr;
   }
 }
@@ -33,6 +35,14 @@ export default {
   width: 100%;
   transition: all .3s;
   background-color: $color-grey-light-2;
+
+  @include respond(lg) {
+    padding: 3rem;
+  }
+
+  @include respond(xs) {
+    padding: 2.5rem;
+  }
 
   &:hover {
     background-color: #B2EBF2;
