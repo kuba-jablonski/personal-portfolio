@@ -22,6 +22,10 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .project {

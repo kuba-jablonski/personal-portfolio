@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav">
+  <nav class="nav container container--lg">
     <MailIcon class="nav__icon"/>
     <div class="nav__items">
       <nuxt-link to="/" exact class="nav__item">Home</nuxt-link>
@@ -21,11 +21,8 @@ export default {
 
 <style lang="scss" scoped>
 .nav {
-  max-width: 114rem;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 10rem;
-  padding: 5rem 1rem 0 1rem;
+  padding-top: 5rem;
   display: flex;
   justify-content: space-between;
 

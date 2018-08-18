@@ -20,8 +20,19 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 112rem;
-  padding: 0 1rem;
+  padding: 0 3rem;
+
+  @include respond(xs) {
+    padding: 0 1rem;
+  }
+
+  &--sm {
+    max-width: 110rem;
+  }
+
+  &--lg {
+    max-width: 118rem;
+  }
 }
 
 .page-enter-active, .page-leave-active {

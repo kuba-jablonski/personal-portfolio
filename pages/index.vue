@@ -1,12 +1,12 @@
 <template>
 <div>
-  <header class="header container">
+  <header class="header container container--sm">
     <text-box>
       <h1 class="h1" slot="heading">Jakub Jabłoński</h1>
       <p class="p">Highly motivated, self-starting developer seeking to launch a career building web applications and services. Familiar with development and deployment process for many web-based technologies.</p>      
     </text-box>
   </header>
-  <main class="main container">
+  <main class="main container container--sm">
     <project-grid/>
   </main>
 </div>

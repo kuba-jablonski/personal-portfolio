@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <div class="footer__content">
+    <div class="footer__content container container--lg">
       <div class="footer__copy">Created by Jakub Jabłoński</div>
       <div class="footer__social">
         <a href="https://github.com/kuba-jablonski" target="_blank" class="footer__link">
@@ -35,8 +35,6 @@ export default {
   padding: 0 1rem;
 
   &__content {
-    max-width: 114rem;
-    margin: 0 auto;
     height: 100%;
     display: flex;
     justify-content: space-between;
