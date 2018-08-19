@@ -26,6 +26,7 @@ export default {
 <style lang="scss" scoped>
 .header, .main {
   margin-top: 10rem;
+  margin-bottom: 10rem;
 }
 
 .heart {

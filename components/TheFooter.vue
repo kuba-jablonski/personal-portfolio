@@ -31,7 +31,6 @@ export default {
 .footer {
   height: 15rem;
   background-color: $color-grey-light-2;
-  margin-top: 10rem;
   padding: 0 1rem;
 
   &__content {

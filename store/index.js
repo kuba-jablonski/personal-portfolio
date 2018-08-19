@@ -59,6 +59,15 @@ const createStore = () => {
             main: quitsmokingMain
           },
           description: 'A Vue project and a Node/Mongo APi. Offline capabilities with background sync.'
+        },
+        {
+          name: 'Quit Smoking App',
+          id: 'qs',
+          images: {
+            thumbnail: quitsmokingThumbnail,
+            main: quitsmokingMain
+          },
+          description: 'A Vue project and a Node/Mongo APi. Offline capabilities with background sync.'
         }
       ]
     },
