@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <div class="footer__content container container--lg">
+    <div class="footer__content container">
       <div class="footer__copy">&copy; 2018 Jakub Jabłoński</div>
       <div class="footer__social">
         <a href="https://github.com/kuba-jablonski" target="_blank" class="footer__link">

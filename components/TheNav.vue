@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav container container--lg">
+  <nav class="nav container">
     <MailIcon class="nav__icon"/>
     <div class="nav__items">
       <nuxt-link to="/" exact class="nav__item">Home</nuxt-link>
