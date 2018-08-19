@@ -6,15 +6,18 @@
       <nuxt-link to="/projects" exact class="nav__item">Projects</nuxt-link>
       <nuxt-link to="/contact" exact class="nav__item">Contact</nuxt-link>
     </div>
+    <MenuIcon @click.native="$emit('onMenuClick')" class="nav__icon menu-icon"/>
   </nav>
 </template>
 
 <script>
 import MailIcon from '@/assets/svg/mail.svg'
+import MenuIcon from '@/assets/svg/menu.svg'
 
 export default {
   components: {
-    MailIcon
+    MailIcon,
+    MenuIcon
   }
 }
 </script>
@@ -34,6 +37,10 @@ export default {
 
   &__items {
     display: flex;
+
+    @include respond(sm) {
+      display: none;
+    }
   }
 
   &__item {
@@ -44,6 +51,15 @@ export default {
     &:not(:last-child) {
       margin-right: 5rem;
     }
+  }
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+
+  @include respond(sm) {
+    display: block;
   }
 }
 
