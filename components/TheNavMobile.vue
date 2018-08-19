@@ -45,7 +45,6 @@ export default {
 
   &__icons {
     display: flex;
-    // justify-content: flex-end;
     align-items: center;
     margin-bottom: 10rem;
   }

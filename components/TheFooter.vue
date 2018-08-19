@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="footer__content container container--lg">
-      <div class="footer__copy">Created by Jakub Jabłoński</div>
+      <div class="footer__copy">&copy; 2018 Jakub Jabłoński</div>
       <div class="footer__social">
         <a href="https://github.com/kuba-jablonski" target="_blank" class="footer__link">
           <github-icon class="footer__icon"/>
@@ -39,6 +39,18 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include respond(xs) {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__social {
+    @include respond(xs) {
+      order: -1;
+      margin-bottom: 1rem;
+    }
   }
 
   &__link {
