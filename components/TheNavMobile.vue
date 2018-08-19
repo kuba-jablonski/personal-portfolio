@@ -4,15 +4,15 @@
       <menu-icon @click.native="$emit('close')" class="mobile-nav__icon"/>
     </div>
     <div class="mobile-nav__items">
-      <nuxt-link to="/" exact class="mobile-nav__item">
+      <nuxt-link @click.native="$emit('close')" to="/" exact class="mobile-nav__item">
         Home
         <small>Back where we started!</small>
       </nuxt-link>
-      <nuxt-link to="/projects" exact class="mobile-nav__item">
+      <nuxt-link @click.native="$emit('close')" to="/projects" exact class="mobile-nav__item">
         Projects
         <small>Explore my work!</small>
       </nuxt-link>
-      <nuxt-link to="/contact" exact class="mobile-nav__item">
+      <nuxt-link @click.native="$emit('close')" to="/contact" exact class="mobile-nav__item">
         Contact
         <small>Let's get in touch!</small>
       </nuxt-link>
