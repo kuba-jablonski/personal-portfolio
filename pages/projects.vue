@@ -3,7 +3,7 @@
     <nuxt-child :key="$route.fullPath"/>
     <div  class="container projects">
       <div v-for="project in projects" :key="project.id" class="project">
-        <nuxt-link class="project__link" :to="`/projects/${project.id}`">
+        <nuxt-link class="project__link" :to="`/projects/${project.id}`" replace>
           <img class="project__img" :src="project.images.thumbnail" alt="">
         </nuxt-link> 
       </div>
