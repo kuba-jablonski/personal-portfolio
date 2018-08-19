@@ -48,7 +48,7 @@ export default {
   &__icon {
     width: 3.5rem;
     height: 3.5rem;
-    fill: $color-grey-light-1;
+    fill: $color-grey-dark-1;
 
     &:not(:last-child) {
       margin-right: 1.5rem;
