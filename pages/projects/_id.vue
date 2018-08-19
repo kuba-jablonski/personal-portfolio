@@ -1,21 +1,14 @@
 <template>
   <div class="container projects">
-    <text-box>
-      <h1 class="h1" slot="heading">{{ project.name }}</h1>
-      <p>{{ project.description }}</p>      
-    </text-box>
+    <h1 class="h1" slot="heading">{{ project.name }}</h1>
+    <p>{{ project.description }}</p>      
     <img :src="project.images.main" alt="">
   </div>
 </template>
 
 <script>
-import TextBox from '@/components/TextBox'
-
 export default {
   transition: 'oko',
-  components: {
-    TextBox
-  },
   computed: {
     project() {
       return this.$store.getters.projectById(this.$route.params.id);

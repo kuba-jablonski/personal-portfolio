@@ -21,31 +21,16 @@ export default {
 .project-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem;
 
-
-
-  @include respond(sm) {
+  @include respond(xs) {
     grid-template-columns: 1fr;
   }
 }
 
 .project {
-  padding: 4rem;
+  display: block;
   width: 100%;
   transition: all .3s;
   background-color: $color-grey-light-2;
-
-  @include respond(lg) {
-    padding: 3rem;
-  }
-
-  @include respond(xs) {
-    padding: 2.5rem;
-  }
-
-  &:hover {
-    background-color: #B2EBF2;
-  }
 }
 </style>
