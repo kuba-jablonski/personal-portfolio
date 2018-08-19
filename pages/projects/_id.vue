@@ -18,7 +18,8 @@ import IconCode from '@/assets/svg/code.svg'
 
 export default {
   transition(to, from) {
-    console.log(to, from)
+    if (!to || !from) return
+
     return +to.params.id > +from.params.id ? 'slideinright' : 'slideinleft'
   },
   components: {
@@ -29,6 +30,17 @@ export default {
     project() {
       return this.$store.getters.projectById(this.$route.params.id);
     }
+  },
+  beforeRouteUpdate(to, from, next) {
+    // TODO: implement a loader
+
+    const img = new Image()
+
+    img.onload = () => {
+      next()
+    }
+
+    img.src = this.$store.state.projects[to.params.id - 1].images.main
   }
 }
 </script>
