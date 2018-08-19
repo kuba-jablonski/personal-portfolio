@@ -1,0 +1,26 @@
+.page-enter-active, .page-leave-active {
+  transition: opacity .5s;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
+}
+
+.slideinright-enter-active, .slideinright-leave-active {
+  transition: transform .5s;
+}
+.slideinright-enter {
+  transform: translateX(100%)
+}
+.slideinright-leave-to {
+  transform: translateX(-100%)
+}
+
+.slideinleft-enter-active, .slideinleft-leave-active {
+  transition: transform .5s;
+}
+.slideinleft-enter {
+  transform: translateX(-100%)
+}
+.slideinleft-leave-to {
+  transform: translateX(100%)
+}

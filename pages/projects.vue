@@ -33,7 +33,6 @@ export default {
   }
 }
 
-
 .projects {
   margin-top: 7rem;
   margin-bottom: 1px;

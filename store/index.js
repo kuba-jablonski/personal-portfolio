@@ -17,7 +17,7 @@ const createStore = () => {
       projects: [
         {
           name: 'Pinclone',
-          id: 'pinclone',
+          id: '1',
           images: {
             thumbnail: pincloneThumbnail,
             main: pincloneMain
@@ -26,7 +26,7 @@ const createStore = () => {
         },
         {
           name: 'Voting App',
-          id: 'voting',
+          id: '2',
           images: {
             thumbnail: votingThumbnail,
             main: votingMain
@@ -35,7 +35,7 @@ const createStore = () => {
         },
         {
           name: 'Book Trading App',
-          id: 'books',
+          id: '3',
           images: {
             thumbnail: booksThumbnail,
             main: booksMain
@@ -44,7 +44,7 @@ const createStore = () => {
         },
         {
           name: 'Pomodoro Timer',
-          id: 'pomodoro',
+          id: '4',
           images: {
             thumbnail: pomodoroThumbnail,
             main: pomodoroMain
@@ -53,7 +53,7 @@ const createStore = () => {
         },
         {
           name: 'Quit Smoking App',
-          id: 'qs',
+          id: '5',
           images: {
             thumbnail: quitsmokingThumbnail,
             main: quitsmokingMain
@@ -62,7 +62,7 @@ const createStore = () => {
         },
         {
           name: 'Quit Smoking App',
-          id: 'qs',
+          id: '6',
           images: {
             thumbnail: quitsmokingThumbnail,
             main: quitsmokingMain
@@ -72,7 +72,8 @@ const createStore = () => {
       ]
     },
     getters: {
-      projectById: state => id => state.projects.find(project => project.id === id)
+      projectById: state => id => state.projects.find(project => project.id === id),
+      projectIndexById: state => id => state.projects.findIndex(project => project.id === id)
     }
   })
 }

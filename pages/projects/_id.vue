@@ -17,7 +17,10 @@ import IconGlobe from '@/assets/svg/globe.svg'
 import IconCode from '@/assets/svg/code.svg'
 
 export default {
-  transition: 'oko',
+  transition(to, from) {
+    console.log(to, from)
+    return +to.params.id > +from.params.id ? 'slideinright' : 'slideinleft'
+  },
   components: {
     IconGlobe,
     IconCode
