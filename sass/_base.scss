@@ -40,7 +40,7 @@ body {
 }
 
 .oko-enter-active, .oko-leave-active {
-  transition: opacity 5s;
+  transition: opacity .5s;
 }
 .oko-enter, .oko-leave-to {
   opacity: 0;
