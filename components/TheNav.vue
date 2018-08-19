@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import MailIcon from '@/assets/svg/mail.svg'
+import MailIcon from '@/assets/svg/mail-envelope-closed.svg'
 import MenuIcon from '@/assets/svg/menu.svg'
 
 export default {
@@ -28,11 +28,13 @@ export default {
   padding-top: 5rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   &__icon {
     width: 5rem;
     height: 5rem;
     fill: $color-grey-light-1;
+    cursor: pointer;
   }
 
   &__items {
@@ -57,6 +59,8 @@ export default {
 .menu-icon {
   display: none;
   cursor: pointer;
+  height: 4rem;
+  width: 4rem;
 
   @include respond(sm) {
     display: block;

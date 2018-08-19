@@ -1,7 +1,7 @@
 <template>
   <div class="mobile-nav">
     <div class="mobile-nav__icons">
-      <menu-icon @click.native="$emit('close')" class="mobile-nav__icon"/>
+      <close-icon @click.native="$emit('close')" class="mobile-nav__icon"/>
     </div>
     <div class="mobile-nav__items">
       <nuxt-link @click.native="$emit('close')" to="/" exact class="mobile-nav__item">
@@ -21,11 +21,11 @@
 </template>
 
 <script>
-import MenuIcon from '@/assets/svg/menu.svg'
+import CloseIcon from '@/assets/svg/close.svg'
 
 export default {
   components: {
-    MenuIcon
+    CloseIcon
   }
 }
 </script>
@@ -50,8 +50,8 @@ export default {
   }
 
   &__icon {
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
     fill: $color-grey-light-1;
     cursor: pointer;
   }

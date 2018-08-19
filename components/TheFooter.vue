@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import GithubIcon from '@/assets/svg/github-with-circle.svg'
-import LinkedinIcon from '@/assets/svg/linkedin-with-circle.svg'
+import GithubIcon from '@/assets/svg/social-github-circular.svg'
+import LinkedinIcon from '@/assets/svg/social-linkedin-circular.svg'
 
 export default {
   components: {
