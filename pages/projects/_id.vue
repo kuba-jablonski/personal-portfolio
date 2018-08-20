@@ -31,16 +31,28 @@ export default {
       return this.$store.getters.projectById(this.$route.params.id);
     }
   },
-  beforeRouteUpdate(to, from, next) {
-    // TODO: implement a loader
+  methods: {
+    loadImage(url) {
+      // TODO: implement a loader
+      return new Promise((resolve, reject) => {
+        const img = new Image()
 
-    const img = new Image()
+        img.onload = () => {
+          resolve()
+        }
 
-    img.onload = () => {
-      next()
+        img.onerror = () => {
+          reject()
+        }
+
+        img.src = url
+      })
+
     }
-
-    img.src = this.$store.state.projects[to.params.id - 1].images.main
+  },
+  async beforeRouteUpdate(to, from, next) {
+    await this.loadImage(this.$store.state.projects[to.params.id - 1].images.main)
+    next()
   }
 }
 </script>
