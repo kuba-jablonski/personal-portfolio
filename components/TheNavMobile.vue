@@ -8,7 +8,7 @@
         Home
         <small>Back where we started!</small>
       </nuxt-link>
-      <nuxt-link @click.native="$emit('close')" to="/projects/pinclone" exact class="mobile-nav__item">
+      <nuxt-link @click.native="$emit('close')" to="/projects/1" exact class="mobile-nav__item">
         Projects
         <small>Explore my work!</small>
       </nuxt-link>
