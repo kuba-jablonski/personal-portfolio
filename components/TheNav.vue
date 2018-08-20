@@ -1,6 +1,8 @@
 <template>
   <nav class="nav container">
-    <MailIcon class="nav__icon"/>
+    <a href="mailto:kuba.jablonski.zg@gmail.com">
+      <MailIcon class="nav__icon"/>
+    </a>
     <div class="nav__items">
       <nuxt-link to="/" exact class="nav__item">Home</nuxt-link>
       <nuxt-link to="/projects/1" exact class="nav__item">Projects</nuxt-link>
