@@ -62,7 +62,15 @@ export default {
 .project {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 10rem;
+  grid-gap: 8rem;
+
+  @include respond(md) {
+    grid-gap: 5rem;
+  }
+
+  @include respond(sm) {
+    grid-template-columns: 1fr;
+  }
 
   &__header {
     display: flex;

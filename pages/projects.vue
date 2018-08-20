@@ -38,6 +38,10 @@ export default {
   margin-bottom: 1px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+
+  // @include respond(sm) {
+  //   grid-template-columns: repeat(3, 1fr);
+  // }
 }
 
 .nuxt-link-active {
