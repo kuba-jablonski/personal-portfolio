@@ -9,10 +9,12 @@
       <p>{{ project.description }}</p> 
     </div>
     <img :src="project.images.main" alt="">
+    <grid-loader/>
   </div>
 </template>
 
 <script>
+import GridLoader from '@/components/GridLoader'
 import IconGlobe from '@/assets/svg/globe.svg'
 import IconCode from '@/assets/svg/code.svg'
 
@@ -24,7 +26,8 @@ export default {
   },
   components: {
     IconGlobe,
-    IconCode
+    IconCode,
+    GridLoader
   },
   computed: {
     project() {
