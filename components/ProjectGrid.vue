@@ -21,6 +21,7 @@ export default {
 .project-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-bottom: 5rem;
 
   @include respond(xs) {
     grid-template-columns: 1fr;

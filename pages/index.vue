@@ -9,7 +9,12 @@
     <main class="main container">
       <h2 class="h2">Projects</h2>
       <project-grid/>
+      <p class="p">
+        If your team is looking for a junior developer with strong fundamentals and deep knowledge of Vue.js - 
+        <nuxt-link class="link" to="/contact">reach out to me.</nuxt-link>
+      </p>
     </main>
+    
   </div>
 </template>
 
@@ -32,5 +37,8 @@ export default {
 .heart {
   color: red;
   font-size: 2rem;
+}
+.link {
+  color: $color-grey-dark-1;
 }
 </style>
