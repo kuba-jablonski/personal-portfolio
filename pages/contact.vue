@@ -52,7 +52,10 @@ export default {
   top: -10%;
   z-index: 0;
   fill: #fafafa;
-  // fill: #d4d3d3;
+
+  @include respond(sm) {
+    display: none;
+  }
 }
 
 .button {
