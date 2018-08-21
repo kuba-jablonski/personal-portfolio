@@ -2,11 +2,15 @@
   <div>
     <nuxt-child :key="$route.fullPath"/>
     <div  class="container projects">
-      <div v-for="project in projects" :key="project.id" class="project">
-        <nuxt-link class="project__link" :to="`/projects/${project.id}`" replace>
-          <img class="project__img" :src="project.images.thumbnail" alt="">
-        </nuxt-link> 
-      </div>
+      <nuxt-link
+        v-for="project in projects"
+        :key="project.id"
+        class="project"
+        tag="img"
+        :src="project.images.thumbnail"
+        :to="`/projects/${project.id}`"
+        replace
+      />
     </div>
   </div>
 </template>
@@ -23,42 +27,20 @@ export default {
 
 <style lang="scss" scoped>
 .project {
-  position: relative;
-
-  &__link {
-    display: block;
-  }
-
-  &__img {
-    width: 100%;
-    border: 2px solid transparent;
-    display: block;
-  }
+  width: 100%;
+  display: block;
+  cursor: pointer;
 }
 
 .projects {
   margin-top: 7rem;
   margin-bottom: 1px;
   display: grid;
+  grid-gap: 2px;
   grid-template-columns: repeat(6, 1fr);
 
   @include respond(sm) {
     grid-template-columns: repeat(3, 1fr);
   }
-}
-
-.nuxt-link-active {
-  // &::before {
-  //   content: "";
-  //   display: inline-block;
-  //   width: 25%;
-  //   height: 1px;
-  //   background-color: $color-grey-light-1;
-  //   position: absolute;
-  //   top: -10px;
-  //   left: 50%;
-  //   transform: translateX(-50%);
-  // }
-  border: 1px solid $color-grey-light-1;
 }
 </style>
