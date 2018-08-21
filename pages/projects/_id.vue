@@ -8,8 +8,12 @@
       </header>
       <p>{{ project.description }}</p> 
     </div>
-    <img :src="project.images.main" alt="">
-    <!-- <grid-loader/> -->
+    <img class="project__img" :src="project.images.main" alt="">
+    <transition name="fade" @afterLeave="$emit('loadingAnimationFinished')">
+      <div v-if="isLoading" class="project__overlay">
+        <grid-loader/>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -29,6 +33,11 @@ export default {
     IconCode,
     GridLoader
   },
+  data() {
+    return {
+      isLoading: false
+    }
+  },
   computed: {
     project() {
       return this.$store.getters.projectById(this.$route.params.id);
@@ -36,7 +45,6 @@ export default {
   },
   methods: {
     loadImage(url) {
-      // TODO: implement a loader
       return new Promise((resolve, reject) => {
         const img = new Image()
 
@@ -50,12 +58,22 @@ export default {
 
         img.src = url
       })
-
     }
   },
   async beforeRouteUpdate(to, from, next) {
+    let loadingAnimationPlayed = false;
+    setTimeout(() => {
+      loadingAnimationPlayed = true;
+      this.isLoading = true
+    }, 300)
+
     await this.loadImage(this.$store.state.projects[to.params.id - 1].images.main)
-    next()
+    this.isLoading = false
+
+    if (loadingAnimationPlayed)
+      this.$on('loadingAnimationFinished', () => next()) 
+    else
+      next()
   }
 }
 </script>
@@ -66,6 +84,7 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 8rem;
+  position: relative;
 
   @include respond(md) {
     grid-gap: 5rem;
@@ -73,6 +92,19 @@ export default {
 
   @include respond(sm) {
     grid-template-columns: 1fr;
+  }
+
+  &__overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(#fff, .9);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__header {
@@ -92,28 +124,10 @@ export default {
       margin-right: 1.5rem;
     }
   }
+
+  &__img {
+    width: 100%;
+    display: block;
+  }
 }
-
-img {
-  width: 100%;
-}
-// .projects {
-//   // padding: 3rem 0;
-//   // display: flex;
-//   // align-items: flex-end;
-
-//   &__divider {
-//     width: 20rem;
-//     height: 2px;
-//     background-color: $color-grey-light-1;
-//     margin-bottom: 2rem;
-//   }
-
-//   &__content {
-//     height: 50%;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-//   }
-// }
 </style>
