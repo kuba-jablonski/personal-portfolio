@@ -40,7 +40,12 @@ export default {
   },
   computed: {
     project() {
-      return this.$store.getters.projectById(this.$route.params.id);
+      if (this.$route.params.id) {
+        return this.$store.getters.projectById(this.$route.params.id);
+      } else {
+        return this.$store.getters.projectById('1');
+      }
+      
     }
   },
   methods: {
@@ -68,6 +73,7 @@ export default {
     }, 300)
 
     await this.loadImage(this.$store.state.projects[to.params.id - 1].images.main)
+    
     this.isLoading = false
 
     if (loadingAnimationPlayed)

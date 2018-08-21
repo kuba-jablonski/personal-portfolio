@@ -21,7 +21,7 @@ export default {
     projects() {
       return this.$store.state.projects
     }
-  }
+  },
 }
 </script>
 

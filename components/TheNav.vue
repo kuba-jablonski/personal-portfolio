@@ -5,7 +5,7 @@
     </a>
     <div class="nav__items">
       <nuxt-link to="/" exact class="nav__item">Home</nuxt-link>
-      <nuxt-link to="/projects/1" exact class="nav__item">Projects</nuxt-link>
+      <nuxt-link to="/projects" class="nav__item">Projects</nuxt-link>
       <nuxt-link to="/contact" exact class="nav__item">Contact</nuxt-link>
     </div>
     <MenuIcon @click.native="$emit('onMenuClick')" class="nav__icon menu-icon"/>
