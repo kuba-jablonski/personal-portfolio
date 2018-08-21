@@ -7,19 +7,19 @@
       <base-input v-model="subject" id="subject">Subject</base-input>
       <base-input v-model="message" type="textarea" id="message">Message</base-input>
       <button type="submit" class="button">Submit</button>
-      <github-icon class="icon"/>
+      <mail-icon class="icon"/>
     </form>
   </div>
 </template>
 
 <script>
 import BaseInput from '@/components/BaseInput'
-import GithubIcon from '@/assets/svg/social-github-circular.svg'
+import MailIcon from '@/assets/svg/mail-envelope-open.svg'
 
 export default {
   components: {
     BaseInput,
-    GithubIcon
+    MailIcon
   },
   data() {
     return {
@@ -46,12 +46,13 @@ export default {
 
 .icon {
   display: block;
-  width: 55%;
+  width: 45%;
   position: absolute;
-  right: 0;
+  right: 2%;
   top: -10%;
   z-index: 0;
   fill: #fafafa;
+  // fill: #d4d3d3;
 }
 
 .button {
