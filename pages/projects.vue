@@ -7,7 +7,6 @@
           <img class="project__img" :src="project.images.thumbnail" alt="">
         </nuxt-link> 
       </div>
-
     </div>
   </div>
 </template>
@@ -26,6 +25,10 @@ export default {
 .project {
   position: relative;
 
+  &__link {
+    display: block;
+  }
+
   &__img {
     width: 100%;
     border: 2px solid transparent;
@@ -39,22 +42,23 @@ export default {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
 
-  // @include respond(sm) {
-  //   grid-template-columns: repeat(3, 1fr);
-  // }
+  @include respond(sm) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .nuxt-link-active {
-  &::before {
-    content: "";
-    display: inline-block;
-    width: 25%;
-    height: 1px;
-    background-color: $color-grey-light-1;
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+  // &::before {
+  //   content: "";
+  //   display: inline-block;
+  //   width: 25%;
+  //   height: 1px;
+  //   background-color: $color-grey-light-1;
+  //   position: absolute;
+  //   top: -10px;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  // }
+  border: 1px solid $color-grey-light-1;
 }
 </style>

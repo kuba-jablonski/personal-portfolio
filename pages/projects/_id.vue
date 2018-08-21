@@ -9,7 +9,7 @@
       <p>{{ project.description }}</p> 
     </div>
     <img :src="project.images.main" alt="">
-    <grid-loader/>
+    <!-- <grid-loader/> -->
   </div>
 </template>
 
