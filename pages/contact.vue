@@ -6,7 +6,8 @@
       <base-input v-model="email" id="email">Email</base-input>
       <base-input v-model="subject" id="subject">Subject</base-input>
       <base-input v-model="message" type="textarea" id="message">Message</base-input>
-      <button type="submit" class="button">Submit</button>
+      <!-- <button type="submit" class="button">Submit</button> -->
+      <base-button type="submit">Submit</base-button>
       <mail-icon class="icon"/>
     </form>
   </div>
@@ -14,11 +15,13 @@
 
 <script>
 import BaseInput from '@/components/BaseInput'
+import BaseButton from '@/components/BaseButton'
 import MailIcon from '@/assets/svg/mail-envelope-open.svg'
 
 export default {
   components: {
     BaseInput,
+    BaseButton,
     MailIcon
   },
   data() {
@@ -56,16 +59,5 @@ export default {
   @include respond(sm) {
     display: none;
   }
-}
-
-.button {
-  padding: 1rem 3rem;
-  font-family: inherit;
-  font-size: 1.6rem;
-  border: none;
-  outline: none;
-  background-color: $color-grey-dark-1;
-  color: #fff;
-  cursor: pointer;
 }
 </style>

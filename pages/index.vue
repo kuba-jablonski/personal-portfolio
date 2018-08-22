@@ -9,10 +9,10 @@
     <main class="main container">
       <h2 class="h2">Projects</h2>
       <project-grid/>
-      <p class="p">
-        If your team is looking for a junior developer with strong fundamentals and deep knowledge of Vue.js - 
-        <nuxt-link class="link" to="/contact">reach out to me.</nuxt-link>
+      <p class="bottom-p">
+        If your team is looking for a junior developer with strong fundamentals and deep knowledge of Vue.js? 
       </p>
+      <base-button @click="$router.push('/contact')">Get in touch</base-button>
     </main>
     
   </div>
@@ -20,10 +20,12 @@
 
 <script>
 import ProjectGrid from '@/components/ProjectGrid'
+import BaseButton from '@/components/BaseButton'
 
 export default {
   components: {
-    ProjectGrid
+    ProjectGrid,
+    BaseButton
   }
 }
 </script>
@@ -40,5 +42,9 @@ export default {
 }
 .link {
   color: $color-grey-dark-1;
+}
+
+.bottom-p {
+  margin-bottom: 1.5rem;
 }
 </style>
