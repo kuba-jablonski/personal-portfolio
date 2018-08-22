@@ -1,12 +1,11 @@
 <template>
   <div class="container">
     <h1 class="h1">Contact</h1>
-    <form @submit.prevent="onSubmit" class="form">
-      <base-input v-model="name" id="name">Name</base-input>
-      <base-input v-model="email" id="email">Email</base-input>
-      <base-input v-model="subject" id="subject">Subject</base-input>
-      <base-input v-model="message" type="textarea" id="message">Message</base-input>
-      <!-- <button type="submit" class="button">Submit</button> -->
+    <form action="https://formspree.io/kuba.jablonski.zg@gmail.com" method="POST" class="form">
+      <base-input v-model="name" id="name" name="name">Name</base-input>
+      <base-input v-model="email" id="email" name="_replyto">Email</base-input>
+      <base-input v-model="subject" id="subject" name="subject">Subject</base-input>
+      <base-input v-model="message" type="textarea" id="message" name="message">Message</base-input>
       <base-button type="submit">Submit</base-button>
       <mail-icon class="icon"/>
     </form>

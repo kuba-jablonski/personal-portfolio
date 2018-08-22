@@ -26,7 +26,6 @@
 <script>
 export default {
   inheritAttrs: false,
-  // props: ["value", "id"]
   props: {
     value: { required: true },
     id: { required: true },
@@ -43,21 +42,17 @@ export default {
 .form-input {
   display: flex;
   flex-direction: column;
-  // text-align: center;
-  // box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   margin-bottom: 2rem;
   position: relative;
   z-index: 1;
 }
 
 .label {
-  // background-color: $color-font;
-  // color: ;
-  // font-size: 1.6rem;
   padding: 0.5rem 1.5rem;
 }
 
 .input {
+  font-family: inherit;
   text-align: inherit;
   padding: 1rem 1.5rem;
   font-size: 1.6rem;
