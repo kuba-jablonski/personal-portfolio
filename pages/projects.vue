@@ -1,7 +1,7 @@
 <template>
   <div>
     <nuxt-child :key="$route.fullPath"/>
-    <div  class="container projects">
+    <div class="container projects">
       <nuxt-link
         v-for="project in projects"
         :key="project.id"
@@ -38,6 +38,10 @@ export default {
   display: grid;
   grid-gap: 2px;
   grid-template-columns: repeat(6, 1fr);
+
+  @include respond(lg) {
+    padding: 1px 2px;
+  }
 
   @include respond(sm) {
     grid-template-columns: repeat(3, 1fr);
