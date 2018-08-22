@@ -7,14 +7,15 @@
       <p class="p"><span class="heart">&hearts;&nbsp;</span> Vue, Node, Progressive Web Apps <span class="heart">&nbsp;&hearts;</span></p> 
     </header>
     <main class="main container">
-      <h2 class="h2">Projects</h2>
+      <!-- <h2 class="h2">Projects</h2> -->
       <project-grid/>
-      <p class="bottom-p">
-        If your team is looking for a junior developer with strong fundamentals and deep knowledge of Vue.js? 
-      </p>
-      <base-button @click="$router.push('/contact')">Get in touch</base-button>
-    </main>
-    
+      <section class="cta">
+        <p class="bottom-p">
+          Is your team looking for a junior developer with strong fundamentals and experience with Vue.js? 
+        </p>
+        <base-button @click="$router.push('/contact')">Get in touch</base-button>
+      </section>
+    </main>  
   </div>
 </template>
 
@@ -45,6 +46,16 @@ export default {
 }
 
 .bottom-p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.cta {
+  padding: 3rem 4rem;
+  border: 1px solid $color-grey-light-1;
+
+  @include respond(xs) {
+    padding: 0;
+    border: none;
+  }
 }
 </style>
