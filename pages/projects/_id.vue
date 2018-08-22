@@ -3,8 +3,12 @@
     <div class="project__info">
       <header class="project__header">
         <h1 class="h1 project__heading">{{ project.name }}</h1>
-        <icon-globe class="project__icon"/>
-        <icon-code  class="project__icon"/>
+        <a :href="project.links.website" target="_blank" class="project__link">
+          <icon-globe class="project__icon"/>
+        </a>
+        <a :href="project.links.code" target="_blank" class="project__link">
+          <icon-code  class="project__icon"/>
+        </a>
       </header>
       <p>{{ project.description }}</p> 
     </div>
@@ -121,14 +125,16 @@ export default {
     margin-right: auto;
   }
 
+  &__link {
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+
   &__icon {
     width: 3.5rem;
     height: 3.5rem;
     fill: $color-grey-dark-1;
-
-    &:not(:last-child) {
-      margin-right: 1.5rem;
-    }
   }
 
   &__img {
