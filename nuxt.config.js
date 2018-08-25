@@ -63,38 +63,51 @@ module.exports = {
   /*
   ** Build configuration
   */
- build: {
+  build: {
   /*
   ** You can extend webpack config here
   */
-  extend(config, ctx) {
-    // Run ESLint on save
-    if (ctx.isDev && ctx.isClient) {
+    extend(config, ctx) {
+      // Run ESLint on save
+      if (ctx.isDev && ctx.isClient) {
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/
+        })
+      }
+      config.module.rules.forEach((rule) => {
+        if (isVueRule(rule)) {
+          rule.options.loaders.sass.push(sassResourcesLoader)
+          rule.options.loaders.scss.push(sassResourcesLoader)
+        }
+        if (isSASSRule(rule)) {
+          rule.use.push(sassResourcesLoader)
+        }
+      })
+
+      const urlLoader = config.module.rules.find((rule) => rule.loader === 'url-loader')
+      urlLoader.test = /\.(png|jpe?g|gif)$/
+
       config.module.rules.push({
-        enforce: 'pre',
-        test: /\.(js|vue)$/,
-        loader: 'eslint-loader',
-        exclude: /(node_modules)/
+        test: /\.svg$/,
+        loader: 'vue-svg-loader',
+        exclude: /node_modules/
       })
     }
-    config.module.rules.forEach((rule) => {
-      if (isVueRule(rule)) {
-        rule.options.loaders.sass.push(sassResourcesLoader)
-        rule.options.loaders.scss.push(sassResourcesLoader)
-      }
-      if (isSASSRule(rule)) {
-        rule.use.push(sassResourcesLoader)
-      }
-    })
+  },
+  
+  generate: {
+    // generate 6 project routes
+    routes() {
+      const routes = [];
 
-    const urlLoader = config.module.rules.find((rule) => rule.loader === 'url-loader')
-    urlLoader.test = /\.(png|jpe?g|gif)$/
+      for (let i = 1; i <= 6; i++) {
+        routes.push('/projects/' + i)
+      }
 
-    config.module.rules.push({
-      test: /\.svg$/,
-      loader: 'vue-svg-loader',
-      exclude: /node_modules/
-    })
+      return routes
+    }
   }
-}
 }

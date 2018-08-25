@@ -28,7 +28,7 @@ const createStore = () => {
             code: 'https://github.com/kuba-jablonski/pinterest-clone',
             website: 'https://jj-pinclone.surge.sh/'
           },
-          description: 'A simple Pinterest-like app make with Vue and Firebase. My first attempt at creating a fully custom CSS solution without relying on any frameworks.'
+          description: 'A simple Pinterest-like application, which allows users to log in and post their favourite pictures. Part of freeCodeCamp fullstack curriculum. Built with Vue, Express and MongoDB.'
         },
         {
           name: 'Voting App',
