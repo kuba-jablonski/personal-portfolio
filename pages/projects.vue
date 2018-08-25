@@ -5,7 +5,7 @@
       <nuxt-link
         v-for="project in projects"
         :key="project.id"
-        class="project"
+        class="projects__img"
         tag="img"
         :src="project.images.thumbnail"
         :to="`/projects/${project.id}`"
@@ -26,12 +26,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.project {
-  width: 100%;
-  display: block;
-  cursor: pointer;
-}
-
 .projects {
   margin-top: 7rem;
   margin-bottom: 1px;
@@ -45,6 +39,12 @@ export default {
 
   @include respond(sm) {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__img {
+    width: 100%;
+    display: block;
+    cursor: pointer;
   }
 }
 </style>
