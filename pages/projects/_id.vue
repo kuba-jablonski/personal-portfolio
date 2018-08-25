@@ -76,7 +76,11 @@ export default {
       this.isLoading = true
     }, 300)
 
-    await this.loadImage(this.$store.state.projects[to.params.id - 1].images.main)
+    try {
+      await this.loadImage(this.$store.state.projects[to.params.id - 1].images.main)
+    } catch(e) {
+      await this.loadImage(this.$store.state.projects[1].images.main)
+    }
     
     this.isLoading = false
 
