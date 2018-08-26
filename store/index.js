@@ -84,8 +84,8 @@ const createStore = () => {
             code: 'https://github.com/kuba-jablonski/web_dev_tier1/tree/master/hanoi',
             website: 'http://jjhanoi-01.surge.sh/'
           },
-          description: 'Playable Towers of Hanoi puzzle.',
-          tech: ['JS', 'SCSS']
+          description: 'A recursive algorithm for solving the Towers of Hanoi puzzle, with a colorful animated interface. You can also try solving it yourself!',
+          tech: ['JavaScript', 'SCSS']
         },
         {
           name: 'Pomodoro Timer',
@@ -98,7 +98,7 @@ const createStore = () => {
             code: 'https://github.com/kuba-jablonski/pomodoro-pwa',
             website: 'https://jj-pomodoro.surge.sh/'
           },
-          description: 'Offline first Pomodoro Timer.',
+          description: 'Offline first productivity timer based on the well known "Pomodoro Technique".',
           tech: ['Vue', 'SCSS', 'PWA']
         }
       ]
