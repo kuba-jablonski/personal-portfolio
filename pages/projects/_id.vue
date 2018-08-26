@@ -107,7 +107,7 @@ export default {
   position: relative;
 
   @include respond(md) {
-    grid-gap: 5rem;
+    grid-gap: 2rem;
   }
 
   @include respond(sm) {
@@ -125,6 +125,11 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  &__info {
+    // fix content reflow issue on mobile
+    min-height: 25rem;
   }
 
   &__header {
