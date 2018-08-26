@@ -10,7 +10,13 @@
           <icon-code  class="project__icon"/>
         </a>
       </header>
-      <p>{{ project.description }}</p> 
+      <p class="p">{{ project.description }}</p>
+      <p>Built with:</p>
+      <ul class="tech">
+        <li class="tech__item" v-for="tech in project.tech" :key="tech">
+          {{ tech }}
+        </li>
+      </ul>
     </div>
     <img class="project__img" :src="project.images.main" alt="">
     <transition name="fade" @afterLeave="$emit('loadingAnimationFinished')">
@@ -144,6 +150,17 @@ export default {
   &__img {
     width: 100%;
     display: block;
+  }
+}
+
+.tech {
+  list-style: none;
+  display: flex;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
   }
 }
 </style>
