@@ -18,60 +18,8 @@ const createStore = () => {
     state: {
       projects: [
         {
-          name: 'Pinclone',
-          id: '1',
-          images: {
-            thumbnail: pincloneThumbnail,
-            main: pincloneMain
-          },
-          links: {
-            code: 'https://github.com/kuba-jablonski/pinterest-clone',
-            website: 'https://jj-pinclone.surge.sh/'
-          },
-          description: 'A simple Pinterest-like application, which allows users to log in and post their favourite pictures. Part of freeCodeCamp fullstack curriculum. Built with Vue, Express and MongoDB.'
-        },
-        {
-          name: 'Voting App',
-          id: '2',
-          images: {
-            thumbnail: votingThumbnail,
-            main: votingMain
-          },
-          links: {
-            code: 'https://github.com/kuba-jablonski/fcc-voting-app--client--v2',
-            website: 'https://jj-vote.surge.sh/'
-          },
-          description: 'My first Vue app AND my first Node/Mongo API. Huge milestone in my learning journey, but I do write much better code these days :)'
-        },
-        {
-          name: 'Book Trading App',
-          id: '3',
-          images: {
-            thumbnail: booksThumbnail,
-            main: booksMain
-          },
-          links: {
-            code: 'https://github.com/kuba-jablonski/book-trading--client',
-            website: 'https://jj-book-trading.surge.sh/'
-          },
-          description: 'Vue SPA connected to a Node server. Data stored in MongoDB. Styled with the Vuetify framework.'
-        },
-        {
-          name: 'Pomodoro Timer',
-          id: '4',
-          images: {
-            thumbnail: pomodoroThumbnail,
-            main: pomodoroMain
-          },
-          links: {
-            code: 'https://github.com/kuba-jablonski/pomodoro-pwa',
-            website: 'https://jj-pomodoro.surge.sh/'
-          },
-          description: 'Offline first Vue.js Progressive Web App.'
-        },
-        {
           name: 'Quit Smoking App',
-          id: '5',
+          id: '1',
           images: {
             thumbnail: quitsmokingThumbnail,
             main: quitsmokingMain
@@ -80,11 +28,54 @@ const createStore = () => {
             code: 'https://github.com/kuba-jablonski/quit-smoking',
             website: 'https://jj-ss.surge.sh/'
           },
-          description: 'A Vue project and a Node/Mongo APi. Offline capabilities with background sync.'
+          description: 'A full-stack progressive web application inspired by a mobile app I used. It helps keep track of a person\'s progress in quitting smoking',
+          tech: ['Vue', 'SCSS', 'PWA', 'Node', 'Express', 'MongoDB']
+        },
+        {
+          name: 'Pinclone',
+          id: '2',
+          images: {
+            thumbnail: pincloneThumbnail,
+            main: pincloneMain
+          },
+          links: {
+            code: 'https://github.com/kuba-jablonski/pinterest-clone',
+            website: 'https://jj-pinclone.surge.sh/'
+          },
+          description: 'A simple Pinterest-like on UI application that allows users to browse other users\' wall of images and to add, link, or delete images to their own Pinterest-style walls.',
+          tech: ['Vue', 'SCSS', 'Firebase']
+        },
+        {
+          name: 'Voting App',
+          id: '3',
+          images: {
+            thumbnail: votingThumbnail,
+            main: votingMain
+          },
+          links: {
+            code: 'https://github.com/kuba-jablonski/fcc-voting-app--client--v2',
+            website: 'https://jj-vote.surge.sh/'
+          },
+          description: 'A full stack project that allows users to browse existing polls as well as to sign up and login to vote or create new polls.',
+          tech: ['Vue', 'Bulma', 'Node', 'Express', 'MongoDB']
+        },
+        {
+          name: 'Book Trading App',
+          id: '4',
+          images: {
+            thumbnail: booksThumbnail,
+            main: booksMain
+          },
+          links: {
+            code: 'https://github.com/kuba-jablonski/book-trading--client',
+            website: 'https://jj-book-trading.surge.sh/'
+          },
+          description: 'A full stack project that allows users to browse, post, and trade second hand books.',
+          tech: ['Vue', 'Vuetify', 'Node', 'Express', 'MongoDB']
         },
         {
           name: 'Hanoi Solver',
-          id: '6',
+          id: '5',
           images: {
             thumbnail: hanoiThumbnail,
             main: hanoiMain
@@ -93,7 +84,22 @@ const createStore = () => {
             code: 'https://github.com/kuba-jablonski/web_dev_tier1/tree/master/hanoi',
             website: 'http://jjhanoi-01.surge.sh/'
           },
-          description: 'One of my oldest projects. A recursive hanoi tower game solver that you can also play yourself :)'
+          description: 'Playable Towers of Hanoi puzzle.',
+          tech: ['JS', 'SCSS']
+        },
+        {
+          name: 'Pomodoro Timer',
+          id: '6',
+          images: {
+            thumbnail: pomodoroThumbnail,
+            main: pomodoroMain
+          },
+          links: {
+            code: 'https://github.com/kuba-jablonski/pomodoro-pwa',
+            website: 'https://jj-pomodoro.surge.sh/'
+          },
+          description: 'Offline first Pomodoro Timer.',
+          tech: ['Vue', 'SCSS', 'PWA']
         }
       ]
     },
