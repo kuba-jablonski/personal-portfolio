@@ -12,16 +12,19 @@
         </li>
       </ul>
       <div class="project__links project__links--desktop">
-        <base-button class="project__btn">Visit live</base-button>
-        <base-button class="project__btn">Check code</base-button>
+        <a :href="project.links.website" target="_blank">
+          <base-button class="project__btn">Visit live</base-button>
+        </a>
+        <a :href="project.links.code" target="_blank">
+          <base-button class="project__btn">Check code</base-button>
+        </a>
       </div>
     </div>
 
     <img class="project__img" :src="project.images.main" alt="">
 
     <div class="project__links project__links--mobile">
-      <base-button class="project__btn">Visit live</base-button>
-      <base-button class="project__btn">Check code</base-button>
+
     </div>
 
     <transition name="fade" @afterLeave="$emit('loadingAnimationFinished')">
