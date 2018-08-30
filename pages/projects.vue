@@ -7,7 +7,7 @@
         :key="project.id"
         :to="`/projects/${project.id}`"
         replace
-        style="position: relative;"
+        class="projects__link"
       >
         <img
           class="projects__img"
@@ -43,6 +43,10 @@ export default {
 
   @include respond(sm) {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__link {
+    position: relative;
   }
 
   &__img {
