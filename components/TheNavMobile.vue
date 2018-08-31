@@ -1,7 +1,8 @@
 <template>
-  <div class="mobile-nav">
+  <div class="mobile-nav container">
     <div class="mobile-nav__icons">
-      <close-icon @click.native="$emit('close')" class="mobile-nav__icon"/>
+      <close-icon @click.native="$emit('close')" class="mobile-nav__icon mobile-nav__icon--close"/>
+      <menu-icon class="mobile-nav__icon mobile-nav__icon--menu"/>
     </div>
     <div class="mobile-nav__items">
       <nuxt-link @click.native="$emit('close')" to="/" exact class="mobile-nav__item">
@@ -22,10 +23,12 @@
 
 <script>
 import CloseIcon from '@/assets/svg/close.svg'
+import MenuIcon from '@/assets/svg/menu.svg'
 
 export default {
   components: {
-    CloseIcon
+    CloseIcon,
+    MenuIcon
   }
 }
 </script>
@@ -34,7 +37,7 @@ export default {
 <style lang="scss" scoped>
 .mobile-nav {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   padding-top: 5rem;
   padding-left: 4rem;
   top: 0;
@@ -42,8 +45,10 @@ export default {
   position: fixed;
   background-color: #fff;
   z-index: 10;
+  overflow-y: overlay;
 
   &__icons {
+    height: 5rem;
     display: flex;
     align-items: center;
     margin-bottom: 10rem;
@@ -54,6 +59,15 @@ export default {
     height: 4rem;
     fill: $color-grey-light-1;
     cursor: pointer;
+
+    &--close {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    &--menu {
+      margin-left: auto;
+    }
   }
 
   &__items {

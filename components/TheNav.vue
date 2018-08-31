@@ -1,15 +1,17 @@
 <template>
-  <nav class="nav container">
-    <a href="mailto:kuba.jablonski.zg@gmail.com">
-      <MailIcon class="nav__icon"/>
-    </a>
-    <div class="nav__items">
-      <nuxt-link to="/" exact class="nav__item">Home</nuxt-link>
-      <nuxt-link to="/projects" class="nav__item">Projects</nuxt-link>
-      <nuxt-link to="/contact" exact class="nav__item">Contact</nuxt-link>
-    </div>
-    <MenuIcon @click.native="$emit('onMenuClick')" class="nav__icon menu-icon"/>
-  </nav>
+  <div class="container">
+    <nav class="nav">
+      <a href="mailto:kuba.jablonski.zg@gmail.com">
+        <MailIcon class="nav__icon"/>
+      </a>
+      <div class="nav__items">
+        <nuxt-link to="/" exact class="nav__item">Home</nuxt-link>
+        <nuxt-link to="/projects" class="nav__item">Projects</nuxt-link>
+        <nuxt-link to="/contact" exact class="nav__item">Contact</nuxt-link>
+      </div>
+      <MenuIcon @click.native="$emit('onMenuClick')" class="nav__icon menu-icon"/>
+    </nav>
+  </div>
 </template>
 
 <script>
@@ -25,9 +27,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.nav {
+.container {
   margin-bottom: 10rem;
   padding-top: 5rem;
+}
+
+.nav {
+  height: 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
