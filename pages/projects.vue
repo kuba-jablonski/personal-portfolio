@@ -5,12 +5,16 @@
       <nuxt-link
         v-for="project in projects"
         :key="project.id"
-        class="projects__img"
-        tag="img"
-        :src="project.images.thumbnail"
         :to="`/projects/${project.id}`"
         replace
-      />
+        class="projects__link"
+      >
+        <img
+          class="projects__img"
+          :src="project.images.thumbnail"
+        />
+        <div class="overlay"></div>
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -41,10 +45,30 @@ export default {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  &__link {
+    position: relative;
+  }
+
   &__img {
     width: 100%;
+    position: relative;
     display: block;
     cursor: pointer;
   }
+}
+
+.overlay {
+  background-color: rgba(#fff, .5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: all .3s;
+}
+
+.nuxt-link-active .overlay {
+  background-color: transparent;
 }
 </style>
