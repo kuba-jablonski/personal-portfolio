@@ -119,13 +119,6 @@ export default {
   position: relative;
 
   @include respond(md) {
-<<<<<<< HEAD
-    grid-gap: 2rem;
-  }
-
-  @include respond(sm) {
-=======
->>>>>>> dev
     grid-template-columns: 1fr;
     grid-gap: 5rem;
   }
