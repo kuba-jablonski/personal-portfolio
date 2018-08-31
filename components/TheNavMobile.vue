@@ -5,24 +5,26 @@
         <transition name="scale">
           <close-icon v-if="showIcon.close" @click.native="$emit('close')" class="mobile-nav__icon mobile-nav__icon--close"/>
         </transition>
-        <transition @after-leave="showIcon.close = true" name="scale">
+        <transition @after-leave="showIcon.close = true; showItems = true" name="scale">
           <menu-icon v-if="showIcon.menu" class="mobile-nav__icon mobile-nav__icon--menu"/>
         </transition>
       </div>
-      <div class="mobile-nav__items">
-        <nuxt-link @click.native="$emit('close')" to="/" exact class="mobile-nav__item">
-          Home
-          <small>Back where we started!</small>
-        </nuxt-link>
-        <nuxt-link @click.native="$emit('close')" to="/projects" class="mobile-nav__item">
-          Projects
-          <small>Explore my work!</small>
-        </nuxt-link>
-        <nuxt-link @click.native="$emit('close')" to="/contact" exact class="mobile-nav__item">
-          Contact
-          <small>Let's get in touch!</small>
-        </nuxt-link>
-      </div>      
+      <transition name="items">
+        <div v-if="showItems" class="mobile-nav__items">
+          <nuxt-link @click.native="$emit('close')" to="/" exact class="mobile-nav__item">
+            Home
+            <small>Back where we started!</small>
+          </nuxt-link>
+          <nuxt-link @click.native="$emit('close')" to="/projects" class="mobile-nav__item">
+            Projects
+            <small>Explore my work!</small>
+          </nuxt-link>
+          <nuxt-link @click.native="$emit('close')" to="/contact" exact class="mobile-nav__item">
+            Contact
+            <small>Let's get in touch!</small>
+          </nuxt-link>
+        </div>
+      </transition>
     </div>
   </transition>
 </template>
@@ -41,7 +43,8 @@ export default {
       showIcon: {
         menu: true,
         close: false
-      }
+      },
+      showItems: false
     }
   }
 }
@@ -76,13 +79,11 @@ export default {
     &--close {
       width: 3rem;
       height: 3rem;
-      // transform: scale(1);
       cursor: pointer;
     }
 
     &--menu {
       margin-left: auto;
-      // transform: scale(0);
     }
   }
 
@@ -121,5 +122,13 @@ export default {
 }
 .scale-leave-to {
   transform: scale(0)
+}
+
+.items-enter-active, .items-leave-active {
+  transition: all .2s;
+}
+.items-enter, .items-leave-to {
+  opacity: 0;
+  transform: translateX(-3rem);
 }
 </style>
