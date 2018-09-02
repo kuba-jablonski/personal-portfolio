@@ -2,10 +2,10 @@
   <div class="container">
     <h1 class="h1">Contact</h1>
     <form action="https://formspree.io/kuba.jablonski.zg@gmail.com" method="POST" class="form">
-      <base-input v-model="name" id="name" name="name">Name</base-input>
-      <base-input v-model="email" id="email" name="_replyto">Email</base-input>
-      <base-input v-model="subject" id="subject" name="subject">Subject</base-input>
-      <base-input v-model="message" type="textarea" id="message" name="message">Message</base-input>
+      <base-input v-model="name" id="name" required name="name">Name</base-input>
+      <base-input v-model="email" type="email" required id="email" name="_replyto">Email</base-input>
+      <base-input v-model="subject" id="subject" required name="subject">Subject</base-input>
+      <base-input v-model="message" textarea required id="message" name="message">Message</base-input>
       <base-button type="submit">Submit</base-button>
       <mail-icon class="icon"/>
     </form>
@@ -29,12 +29,6 @@ export default {
       email: '',
       subject: '',
       message: ''
-    }
-  },
-  methods: {
-    onSubmit() {
-      // TODO
-      console.log('do stuff')
     }
   }
 }

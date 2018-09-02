@@ -4,7 +4,7 @@
       <slot/>
     </label>
     <input
-      v-if="type === 'input'"
+      v-if="!textarea"
       v-bind="$attrs"
       class="input"
       :id="id"
@@ -12,7 +12,7 @@
       @input="$emit('input', $event.target.value)"
     >
     <textarea
-      v-if="type === 'textarea'"
+      v-if="textarea"
       v-bind="$attrs"
       class="textarea"
       :id="id"
@@ -29,9 +29,9 @@ export default {
   props: {
     value: { required: true },
     id: { required: true },
-    type: {
-      type: String,
-      default: 'input'
+    textarea: {
+      type: Boolean,
+      default: false
     }
   }
 };

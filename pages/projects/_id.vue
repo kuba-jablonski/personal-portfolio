@@ -120,7 +120,7 @@ export default {
 
   @include respond(md) {
     grid-template-columns: 1fr;
-    grid-gap: 5rem;
+    grid-gap: 3rem;
   }
 
   &__overlay {
@@ -139,7 +139,7 @@ export default {
   &__info {
     display: flex;
     flex-direction: column;
-    min-height: 20rem;
+    min-height: 25rem;
   }
 
   &__header {
@@ -187,6 +187,7 @@ export default {
 .tech {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
 
   &__item {
     &:not(:last-child) {
