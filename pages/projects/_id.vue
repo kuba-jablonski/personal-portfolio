@@ -21,7 +21,7 @@
       </div>
     </div>
 
-    <img class="project__img" :src="project.images.main" alt="">
+    <img class="project__img" :src="project.images.main" alt="Project image.">
 
     <div class="project__links project__links--mobile">
       <a :href="project.links.website" target="_blank">

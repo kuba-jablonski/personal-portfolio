@@ -1,7 +1,7 @@
 <template>
   <div class="project-grid">
     <nuxt-link v-for="project in projects" :key="project.id" :to="`projects/${project.id}`">
-      <img class="project" :src="project.images.thumbnail" alt="">
+      <img class="project" :src="project.images.thumbnail" :alt="`Thumbnail image of ${project.name}.`">
     </nuxt-link>    
   </div>
 </template>

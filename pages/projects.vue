@@ -12,6 +12,7 @@
         <img
           class="projects__img"
           :src="project.images.thumbnail"
+          :alt="`Thumbnail image of ${project.name}.`"
         />
         <div class="overlay"></div>
       </nuxt-link>
