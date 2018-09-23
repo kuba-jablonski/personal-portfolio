@@ -20,9 +20,13 @@ export default {
 <style lang="scss" scoped>
 .project-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 10rem;
   grid-gap: 2rem;
+
+  @include respond(sm) {
+    grid-template-columns: 1fr 1fr;
+  }
 
   @include respond(xs) {
     grid-template-columns: 1fr;
