@@ -63,6 +63,12 @@ module.exports = {
   modules: [
   ],
 
+  router: {
+    scrollBehavior: function (to, from, savedPosition) {
+      if (from.name !== 'projects-id') return { x: 0, y: 0 }
+    }    
+  },
+
   /*
   ** Build configuration
   */
