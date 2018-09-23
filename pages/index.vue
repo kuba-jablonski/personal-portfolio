@@ -1,10 +1,10 @@
 <template>
   <div>
     <header class="header container">
-      <h1 class="h1">Jakub Jabłoński</h1>
-      <p class="p">Hi! I'm a highly motivated, self-starting developer seeking to launch a career building web applications and services.</p>
-      <p class="p">I love creating complex user interfaces using modern JavaScript techniques and frameworks.</p>
-      <p class="p"><span class="heart">&hearts;&nbsp;</span> Vue, Node, Progressive Web Apps <span class="heart">&nbsp;&hearts;</span></p>
+      <h1 class="h1">Hi! I'm Jakub</h1>
+      <p class="p">I'm a highly motivated, self-starting developer seeking to launch a career building web applications and services.</p>
+      <!-- <p class="p">I'm passionate about front-end web development, I love to develop quality user experiences and currently open to new opportunities.</p>
+      <p class="p"><span class="heart">&hearts;&nbsp;</span> Vue, Node, Progressive Web Apps <span class="heart">&nbsp;&hearts;</span></p> -->
     </header>
     <main class="main container">
       <section class="about">
