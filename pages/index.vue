@@ -96,8 +96,11 @@ export default {
   margin-bottom: 10rem;
 
   &__heading {
-    // grid-column: 1/-1;
     margin-bottom: .5rem;
+
+    @include respond(sm) {
+      grid-column: 1/-1;
+    }
   }
 
   &__description {
