@@ -1,16 +1,28 @@
 import Vuex from 'vuex'
 import pincloneThumbnail from '~/assets/images/pinclone-thumbnail.png'
+import pincloneThumbnailTiny from '~/assets/images/pinclone-thumbnail-tiny.png'
 import pincloneMain from '~/assets/images/pinclone-main.png'
+import pincloneMainTiny from '~/assets/images/pinclone-main-tiny.png'
 import votingThumbnail from '~/assets/images/voting-thumbnail.png'
+import votingThumbnailTiny from '~/assets/images/voting-thumbnail-tiny.png'
 import votingMain from '~/assets/images/voting-main.png'
+import votingMainTiny from '~/assets/images/voting-main-tiny.png'
 import booksThumbnail from '~/assets/images/books-thumbnail.png'
+import booksThumbnailTiny from '~/assets/images/books-thumbnail-tiny.png'
 import booksMain from '~/assets/images/books-main.png'
+import booksMainTiny from '~/assets/images/books-main-tiny.png'
 import pomodoroThumbnail from '~/assets/images/pomodoro-thumbnail.png'
+import pomodoroThumbnailTiny from '~/assets/images/pomodoro-thumbnail-tiny.png'
 import pomodoroMain from '~/assets/images/pomodoro-main.png'
+import pomodoroMainTiny from '~/assets/images/pomodoro-main-tiny.png'
 import quitsmokingThumbnail from '~/assets/images/quitsmoking-thumbnail.png'
+import quitsmokingThumbnailTiny from '~/assets/images/quitsmoking-thumbnail-tiny.png'
 import quitsmokingMain from '~/assets/images/quitsmoking-main.png'
+import quitsmokingMainTiny from '~/assets/images/quitsmoking-main-tiny.png'
 import hanoiThumbnail from '~/assets/images/hanoi-thumbnail.png'
+import hanoiThumbnailTiny from '~/assets/images/hanoi-thumbnail-tiny.png'
 import hanoiMain from '~/assets/images/hanoi-main.png'
+import hanoiMainTiny from '~/assets/images/hanoi-main-tiny.png'
 
 
 const createStore = () => {
@@ -22,7 +34,9 @@ const createStore = () => {
           id: '1',
           images: {
             thumbnail: quitsmokingThumbnail,
-            main: quitsmokingMain
+            thumbnailPlaceholder: quitsmokingThumbnailTiny,
+            main: quitsmokingMain,
+            mainPlaceholder: quitsmokingMainTiny
           },
           links: {
             code: 'https://github.com/kuba-jablonski/quit-smoking',
@@ -36,7 +50,9 @@ const createStore = () => {
           id: '2',
           images: {
             thumbnail: pincloneThumbnail,
-            main: pincloneMain
+            thumbnailPlaceholder: pincloneThumbnailTiny,
+            main: pincloneMain,
+            mainPlaceholder: pincloneMainTiny
           },
           links: {
             code: 'https://github.com/kuba-jablonski/pinterest-clone',
@@ -49,8 +65,10 @@ const createStore = () => {
           name: 'Voting App',
           id: '3',
           images: {
-            thumbnail: votingThumbnail,
-            main: votingMain
+            thumbnail: votingThumbnail, 
+            thumbnailPlaceholer: votingThumbnailTiny, 
+            main: votingMain,
+            mainPlaceholder: votingMainTiny
           },
           links: {
             code: 'https://github.com/kuba-jablonski/fcc-voting-app--client--v2',
@@ -64,7 +82,9 @@ const createStore = () => {
           id: '4',
           images: {
             thumbnail: booksThumbnail,
-            main: booksMain
+            thumbnailPlaceholder: booksThumbnailTiny,
+            main: booksMain,
+            mainPlaceholder: booksMainTiny,
           },
           links: {
             code: 'https://github.com/kuba-jablonski/book-trading--client',
@@ -78,7 +98,9 @@ const createStore = () => {
           id: '5',
           images: {
             thumbnail: hanoiThumbnail,
-            main: hanoiMain
+            thumbnailPlaceholder: hanoiThumbnailTiny,
+            main: hanoiMain,
+            mainPlaceholder: hanoiMainTiny,
           },
           links: {
             code: 'https://github.com/kuba-jablonski/web_dev_tier1/tree/master/hanoi',
@@ -92,7 +114,9 @@ const createStore = () => {
           id: '6',
           images: {
             thumbnail: pomodoroThumbnail,
-            main: pomodoroMain
+            thumbnailPlaceholder: pomodoroThumbnailTiny,
+            main: pomodoroMain,
+            mainPlaceholder: pomodoroMainTiny,
           },
           links: {
             code: 'https://github.com/kuba-jablonski/pomodoro-pwa',
