@@ -6,7 +6,6 @@
 
 <style lang="scss" scoped>
 .btn {
-  padding: 1rem 3rem;
   position: relative;
   font-family: inherit;
   font-size: 1.6rem;
