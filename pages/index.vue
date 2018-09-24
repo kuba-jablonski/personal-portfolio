@@ -9,18 +9,18 @@
     <main class="main container">
       <section class="about">
         <div class="skill">
-          <h2 class="h2 skill__heading">I create responsive websites</h2>
+          <h2 class="h2 skill__heading">I create responsive <span>websites</span></h2>
           <p class="skill__description">I use modern web standards to develop lean and performant websites, that look great on any screen size. Using Sass, I'm able to develop scalable, component-based solutions without relying on CSS frameworks.
           </p>
           <responsive-icon class="skill__icon"/>    
         </div>
         <div class="skill">
-          <h2 class="h2 skill__heading">I build JavaScript applications</h2>
+          <h2 class="h2 skill__heading">I build JavaScript <span>applications</span></h2>
           <p class="skill__description">I have used Vue.js on many of my personal projects. I'm very familiar with it's companion libraries (Vuex, Vue-Router, Nuxt etc.) and best practices. If needed, this experience and strong JavaScript fundamentals will allow me to quickly pick up other front-end frameworks such as React.</p>
           <report-icon class="skill__icon"/>
         </div>
         <div class="skill">
-          <h2 class="h2 skill__heading">I know my way around the back-end</h2>
+          <h2 class="h2 skill__heading">I know my way around <span>the back-end</span></h2>
           <p class="skill__description">While my focus is on the front-end side of things, I have also worked with Node.js on the back-end to create more complex projects. I'm comfortable using libraries such as Express, Mongoose, Socket-io, Passport, Joi, and more.</p>
           <server-icon class="skill__icon"/>
         </div>        
@@ -100,6 +100,10 @@ export default {
 
     @include respond(sm) {
       grid-column: 1/-1;
+    }
+
+    span {
+      font-weight: 500;
     }
   }
 
