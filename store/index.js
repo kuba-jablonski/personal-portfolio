@@ -9,7 +9,6 @@ import pomodoroThumbnail from '~/assets/images/pomodoro-thumbnail.png'
 import pomodoroMain from '~/assets/images/pomodoro-main.png'
 import quitsmokingThumbnail from '~/assets/images/quitsmoking-thumbnail.png'
 import quitsmokingMain from '~/assets/images/quitsmoking-main.png'
-import quitsmokingMainTiny from '~/assets/images/quitsmoking-main-tiny.png'
 import hanoiThumbnail from '~/assets/images/hanoi-thumbnail.png'
 import hanoiMain from '~/assets/images/hanoi-main.png'
 
