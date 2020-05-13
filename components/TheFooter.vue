@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="footer__content container">
-      <div class="footer__copy">&copy; 2018 Jakub Jabłoński</div>
+      <div class="footer__copy">&copy; 2019 Jakub Jabłoński</div>
       <div class="footer__social">
         <a href="https://github.com/kuba-jablonski" target="_blank" class="footer__link">
           <github-icon class="footer__icon"/>
@@ -15,15 +15,15 @@
 </template>
 
 <script>
-import GithubIcon from '@/assets/svg/social-github-circular.svg'
-import LinkedinIcon from '@/assets/svg/social-linkedin-circular.svg'
+import GithubIcon from "@/assets/svg/social-github-circular.svg";
+import LinkedinIcon from "@/assets/svg/social-linkedin-circular.svg";
 
 export default {
   components: {
     GithubIcon,
     LinkedinIcon
   }
-}
+};
 </script>
 
 
